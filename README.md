@@ -41,6 +41,9 @@ This repository contains the backend APIs to fetch and store YouTube videos base
     # Mongodb connection string where youtube_db is the databse name.
     MONGODB_URI=mongodb://localhost:27017/youtube_db
 
+    # Gemini API Key
+    GEMINI_API_KEY={gemini-API-key}
+
     # Server
     PORT=3000
     ```
