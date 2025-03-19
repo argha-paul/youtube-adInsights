@@ -1,0 +1,35 @@
+{
+  "name": "youtube-api-backend",
+  "version": "1.0.0",
+  "description": "Backend service to fetch YouTube videos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youtube",
+    "api",
+    "backend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "axios": "^1.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "googleapis": "^126.0.1",
+    "mongoose": "^7.8.6",
+    "morgan": "^1.10.0",
+    "natural": "^8.0.1",
+    "node-cron": "^3.0.3",
+    "node-nlp": "^5.0.0-alpha.5",
+    "openai": "^4.87.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
