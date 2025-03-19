@@ -67,18 +67,19 @@ The server should start, and you can access the API endpoints at http://localhos
 
 Here's a summary of all the API endpoints available:
 
-- GET /api/fetch-now: Immediately fetch and store videos from all configured channels and keywords
-- GET /api/videos: Get all stored videos with pagination
-- GET /api/videos/channel/:channelId: Get videos from a specific channel
-- GET /api/videos/search?keyword=example: Search for videos by keyword
-- GET /api/videos/:videoId: Get details of a specific video
-- POST /api/channels: Add a new channel to monitor (body: { "channelId": "UC..." })
-- POST /api/keywords: Add a new search keyword (body: { "keyword": "example" })
-- GET /health: Health check endpoint
-- GET /api/videos/trending: Get trending videos (based on view count, likes, and engagement)
-- GET /api/videos/engagement: Get videos with highest engagement
-- GET /api/videos/sponsored: Get videos with sponsorships
-- GET /api/videos/category/:categoryId: Get videos by category
-- GET /api/videos/tag/:tag: Get videos by tag
-- GET /api/channels/:channelId/stats: Get channel statistics
-- GET /api/videos/:videoId/recommendations: Get video recommendations based on similarity
+* `/api/fetch-now`: Fetches and stores videos immediately from YouTube API.
+* `/api/videos`: Retrieves all stored videos with pagination.
+* `/api/videos/:videoId`: Retrieves a specific video by its ID.
+* `/api/videos/search/:keyword`: Searches videos by keyword with pagination.
+* `/api/channels/:channelId/videos`: Retrieves videos from a specific channel with pagination.
+* `/api/videos/:videoId/generate-insights`: Generates an ad insights report for a specific video.
+* `/api/videos/:videoId/ad-insights`: Retrieves existing ad insights for a specific video.
+* `/api/channels/:channelId/generate-insights`: Initiates batch ad insights generation for a channel.
+* `/api/channels/:channelId/insights-status`: Retrieves the batch processing status for a channel's ad insights.
+* `/api/videos/:videoId/comments`: Retrieves comments for a specific video with pagination.
+* `/api/videos/:videoId/refresh-comments`: Fetches and refreshes comments for a video from YouTube API, including sentiment analysis.
+* `/api/dashboard`: Retrieves ad insights dashboard data, including overall stats, ad styles, top brands, sentiment, and recent insights.
+* `/api/fetch/channel/:channelId`: Fetches videos from a specific YouTube channel.
+* `/api/fetch/search/:keyword`: Searches and fetches videos by keyword from YouTube.
+* `/api/compare/channels`: Compares ad insights between multiple channels.
+* `/api/trends/ad-metrics`: Retrieves ad insights trends over time for specified metrics.
